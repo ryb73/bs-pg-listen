@@ -25,7 +25,7 @@
   "author": "Ryan",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Warning: no test specified\"",
     "build": "npm run clean && bsb -make-world",
     "watch": "npm run clean && bsb -make-world -w",
     "clean": "rm -rf lib && bsb -clean-world",
