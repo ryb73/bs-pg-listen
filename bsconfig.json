@@ -1,5 +1,5 @@
 {
-    "name": "bs-pg-listen",
+    "name": "@ryb73/bs-pg-listen",
     "bs-dependencies": ["@ryb73/decco"],
     "sources": [
         { "dir": "src" },
