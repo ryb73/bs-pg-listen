@@ -1,5 +1,6 @@
 {
   "name": "@ryb73/bs-pg-listen",
+  "private": false,
   "version": "0.0.1",
   "description": "Bucklescript bindings for https://www.npmjs.com/package/pg-listen",
   "main": "index.js",
