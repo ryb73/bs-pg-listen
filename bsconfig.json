@@ -1,0 +1,14 @@
+{
+    "name": "bs-pg-listen",
+    "bs-dependencies": ["@ryb73/decco"],
+    "sources": [
+        { "dir": "src" },
+        {
+            "dir": "test",
+            "type": "dev"
+        }
+    ],
+    "refmt": 3,
+    "ppx-flags": ["ppx_decco"],
+    "bsc-flags": [ "-w -10", "-bs-super-errors" ]
+}
