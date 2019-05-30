@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git@github.com:ryb73/bs-pg-listen.git"
   },
+  "files": [
+    "/bsconfig.json",
+    "/src",
+    "/lib/js/src"
+  ],
   "bugs": {
     "url": "https://github.com/ryb73/bs-pg-listen/issues"
   },
