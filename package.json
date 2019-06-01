@@ -40,7 +40,7 @@
     "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
   "peerDependencies": {
-    "bs-platform": "^4.0.0",
+    "bs-platform": "^5.0.0",
     "pg": "7.x"
   },
   "dependencies": {
