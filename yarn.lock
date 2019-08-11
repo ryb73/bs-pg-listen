@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ryb73/decco@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@ryb73/decco/-/decco-0.0.14.tgz#68814f6eaff42edac993306a60b9142446930acc"
-  integrity sha512-RPxV0rlGa3gK6yoXVnsRW9A5xjN2ng7VuI1DHc79sMGJP4foWAuuyDxb1gSAa2iJLos85vpgDP7gV8CmCC8nQQ==
+"@ryb73/decco@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@ryb73/decco/-/decco-0.1.0.tgz#c39e03377bebe975864bb9c2e05fe3aeb1cd090d"
+  integrity sha512-raSP6kWVYYMHWgBK9ZsjbWsuziglDC+RxQ4G5EaHDcVpDunqxqk3/pdcgpLMdAAAAVQDHBKdOCu9lrZE5y0tDg==
 
 buffer-writer@2.0.0:
   version "2.0.0"
@@ -44,10 +44,10 @@ pg-int8@1.0.1:
   resolved "https://registry.yarnpkg.com/pg-int8/-/pg-int8-1.0.1.tgz#943bd463bf5b71b4170115f80f8efc9a0c0eb78c"
   integrity sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
 
-pg-listen@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/pg-listen/-/pg-listen-1.3.0.tgz#dc39387134b4f5ed2ee7bb96e5a9a63d3f2cad19"
-  integrity sha512-+c6MSAzMjCWpmKiH/YtCp6wqu+kAe9zXped32ovE9z2LmEm0QjjHr6LBvwEEZ01pDm5D9bROf8f8DGflsQ/a3Q==
+pg-listen@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/pg-listen/-/pg-listen-1.3.2.tgz#87989171e2cc46d311a641726253d4d17eab4486"
+  integrity sha512-2Mz2ej45yBN/LonO4RMkTLMnP+rlfLzvvFDHsDfduKwLZ7P1zV+ms1XOm0sVbr/2aamUQHnvxrXAnhsymLnjYA==
   dependencies:
     debug "^4.1.1"
     pg-format "^1.0.4"
@@ -58,10 +58,10 @@ pg-pool@^2.0.4:
   resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-2.0.6.tgz#7b561a482feb0a0e599b58b5137fd2db3ad8111c"
   integrity sha512-hod2zYQxM8Gt482q+qONGTYcg/qVcV32VHVPtktbBJs0us3Dj7xibISw0BAAXVMCzt8A/jhfJvpZaxUlqtqs0g==
 
-pg-types@~2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/pg-types/-/pg-types-2.0.1.tgz#b8585a37f2a9c7b386747e44574799549e5f4933"
-  integrity sha512-b7y6QM1VF5nOeX9ukMQ0h8a9z89mojrBHXfJeSug4mhL0YpxNBm83ot2TROyoAmX/ZOX3UbwVO4EbH7i1ZZNiw==
+pg-types@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/pg-types/-/pg-types-2.2.0.tgz#2d0250d636454f7cfa3b6ae0382fdfa8063254a3"
+  integrity sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==
   dependencies:
     pg-int8 "1.0.1"
     postgres-array "~2.0.0"
@@ -69,16 +69,16 @@ pg-types@~2.0.0:
     postgres-date "~1.0.4"
     postgres-interval "^1.1.0"
 
-pg@^7.11.0:
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/pg/-/pg-7.11.0.tgz#a8b9ae9cf19199b7952b72957573d0a9c5e67c0c"
-  integrity sha512-YO4V7vCmEMGoF390LJaFaohWNKaA2ayoQOEZmiHVcAUF+YsRThpf/TaKCgSvsSE7cDm37Q/Cy3Gz41xiX/XjTw==
+pg@^7.12.1:
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/pg/-/pg-7.12.1.tgz#880636d46d2efbe0968e64e9fe0eeece8ef72a7e"
+  integrity sha512-l1UuyfEvoswYfcUe6k+JaxiN+5vkOgYcVSbSuw3FvdLqDbaoa2RJo1zfJKfPsSYPFVERd4GHvX3s2PjG1asSDA==
   dependencies:
     buffer-writer "2.0.0"
     packet-reader "1.0.0"
     pg-connection-string "0.1.3"
     pg-pool "^2.0.4"
-    pg-types "~2.0.0"
+    pg-types "^2.1.0"
     pgpass "1.x"
     semver "4.3.2"
 
