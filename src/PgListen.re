@@ -1,15 +1,27 @@
+type ssl;
+[@bs.obj] external ssl: (~ca: string=?, ~cert: string=?, ~key: string=?) => ssl = "";
+
 type opts;
 [@bs.obj]
 external opts:
-    (~user: string=?, ~host: string=?, ~database: string=?, ~password: string=?,
-     ~port: int=?, ~connectionString: string=?, unit) => opts = "";
+    (~user: string=?, ~host: string=?, ~database: string=?, ~password: string=?, ~ssl: ssl=?,
+     ~port: int=?, ~connectionString: string=?) => opts = "";
 
 type t;
 [@bs.module] external make: opts => t = "pg-listen";
 let make =
-    (~user=?, ~host=?, ~database=?, ~password=?, ~port=?, ~connectionString=?, ()) =>
-        opts(~user?, ~host?, ~database?, ~password?, ~port?, ~connectionString?, ())
+    (~user=?, ~host=?, ~database=?, ~password=?, ~port=?,
+     ~sslCa=?, ~sslCert=?, ~sslKey=?, ~connectionString=?, ()) =>
+    {
+        let ssl =
+            [| sslCa, sslCert, sslKey |]
+            |> Js.Array.some(Belt.Option.isSome)
+            ? Some(ssl(~ca=?sslCa, ~cert=?sslCert, ~key=?sslKey))
+            : None;
+
+        opts(~user?, ~host?, ~database?, ~password?, ~port?, ~connectionString?, ~ssl?)
         |> make;
+    };
 
 [@bs.send] external connect: t => Js.Promise.t(unit) = "";
 [@bs.send] external close: t => Js.Promise.t(unit) = "";
@@ -28,7 +40,7 @@ let onError = (subscriber) => events(subscriber) |> onError;
 [@bs.send]
 external onNotification:
     (events, [@bs.as "notification"] _, (Js.Json.t => unit)) => unit = "on";
-[@decco] type notificationEvent = { channel: string, payload: Js.Json.t };
+[@decco.decode] type notificationEvent = { channel: string, payload: Js.Json.t };
 let onNotification = (subscriber, cb) => {
     onNotification(events(subscriber), result =>
         notificationEvent_decode(result)
