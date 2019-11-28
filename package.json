@@ -12,8 +12,7 @@
   },
   "files": [
     "/bsconfig.json",
-    "/src",
-    "/lib/js/src"
+    "/src"
   ],
   "bugs": {
     "url": "https://github.com/ryb73/bs-pg-listen/issues"
@@ -40,15 +39,15 @@
     "postinstall": "[ ! -f package-links.json ] || ppl link-file"
   },
   "peerDependencies": {
-    "bs-platform": "^5.0.0",
+    "bs-platform": "^6.0.1",
     "pg": "7.x"
   },
   "dependencies": {
-    "@ryb73/decco": "0.1.0",
+    "decco": "^1.0.0",
     "pg-listen": "^1.5.0"
   },
   "devDependencies": {
-    "bs-platform": "^5.0.6",
+    "bs-platform": "^6.0.1",
     "pg": "^7.12.1"
   }
 }
