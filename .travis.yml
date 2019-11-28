@@ -3,8 +3,6 @@ cache: yarn
 node_js:
 - '11'
 script:
-- yarn add bs-platform
-- git checkout package.json
 - yarn build
 - yarn test
 deploy:
