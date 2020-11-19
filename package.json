@@ -35,11 +35,10 @@
     "test": "echo \"Warning: no test specified\"",
     "build": "npm run clean && bsb -make-world",
     "watch": "npm run clean && bsb -make-world -w",
-    "clean": "rm -rf lib && bsb -clean-world",
-    "postinstall": "[ ! -f package-links.json ] || ppl link-file"
+    "clean": "rm -rf lib && bsb -clean-world"
   },
   "peerDependencies": {
-    "bs-platform": "^6.0.1",
+    "bs-platform": "6 || 7 || 8",
     "pg": "7.x"
   },
   "dependencies": {
@@ -47,7 +46,7 @@
     "pg-listen": "^1.5.0"
   },
   "devDependencies": {
-    "bs-platform": "^6.0.1",
+    "bs-platform": "8",
     "pg": "^7.12.1"
   }
 }

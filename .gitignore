@@ -68,3 +68,9 @@ lib/
 
 # persistent-package-linker
 package-links.json
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
